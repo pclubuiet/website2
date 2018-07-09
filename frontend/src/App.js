@@ -1,6 +1,8 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import Routes from './Routes';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Resources from './pages/Resources';
 import Nav from './components/Nav';
 import NavDrawer from './components/NavDrawer';
 
@@ -47,13 +49,18 @@ class App extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.root}>
-        <Nav handleDrawerToggle={() => this.drawerToggle()} />
-        <NavDrawer drawerOpen={this.state.drawerOpen} handleDrawerToggle={() => this.drawerToggle()} />
-        <main className={classes.content}>
-          <Routes />  
-        </main>
-      </div>
+      <BrowserRouter>
+        <div className={classes.root}>
+          <Nav handleDrawerToggle={() => this.drawerToggle()} />
+          <NavDrawer drawerOpen={this.state.drawerOpen} handleDrawerToggle={() => this.drawerToggle()} />
+          <div className={classes.content}>
+            <Switch>
+              <Route path={'/home/'} exact component={Home} />
+              <Route path={'/resources/'} exact component={Resources} />
+            </Switch>
+          </div>
+        </div>
+      </BrowserRouter>
     );
   }
 }
