@@ -27,6 +27,11 @@ const styles = theme => ({
 });
 
 class NavDrawer extends Component {
+  goToPath(path) {
+    this.props.handleDrawerToggle();
+    this.props.history.push(path);
+  }
+
   render() {
     const { classes, theme } = this.props;
 
@@ -40,10 +45,10 @@ class NavDrawer extends Component {
           </div>        
         <Divider />
         <List component="nav">
-          <ListItem button onClick={() => this.props.history.push('/home/')}>
+          <ListItem button onClick={() => this.goToPath('/home/')}>
             <ListItemText primary="Home"/>
           </ListItem>
-          <ListItem button  onClick={() => this.props.history.push('/resources/')} >
+          <ListItem button  onClick={() => this.goToPath('/resources/')} >
             <ListItemText primary="Resources" />
           </ListItem>
         </List>
