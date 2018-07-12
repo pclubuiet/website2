@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import Skeleton from 'react-skeleton-loader'; // Do not remove. Styles are being used.
 import Img from 'react-image';
 
 const styles = theme => ({
@@ -29,10 +30,9 @@ class Home extends Component {
 
 	render() {
 		const { classes } = this.props;
-		const load = <div className={["react-skeleton-load", "animated", classes.skeleton]} />;
+		const load = <div className={`react-skeleton-load animated ${classes.skeleton}`} />;
 		return (
 			<div>
-				
 				<Grid container spacing={24}>
 					<Grid item md={6} className={classes.flexParent}>
 						<Img
