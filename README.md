@@ -62,7 +62,7 @@ git remote add myfork https://github.com/<username>/website2.git
 ```
 
 ## Fixing issues
-### Step 1: Pick an issue
+### Step 1: Pick an issues
 After selecting an issue
 1. Comment on the issue saying that you are working on the issue.
 2. We expect you to discuss the approach by comments.
@@ -100,7 +100,7 @@ After selecting an issue
 
  Make sure your branch is up-to-date with the latest version of the master. Else you are required to do a rebase to place your changes above master branch.
 
-### Step 3: Follow Coding policy
+### Step 3: Follow Coding policys
 
  1. Please help us follow the best practice to make it easy for the reviewer as well as the contributor. We want to focus on the code quality more than on managing pull request ethics.
  2. Single commit per pull request
@@ -109,12 +109,12 @@ After selecting an issue
  5. The pull request will not get merged until and unless the commits are squashed. In case there are multiple commits on the PR, the commit author needs to squash them and not the maintainers cherrypicking and merging squashes.
  6. If the PR is related to any front end change, please attach relevant screenshots in the pull request description.
 
-### Step 4: Submitting a Pull request
+### Step 4: Submitting a Pull requests
 Once a PR is opened, try and complete it within 2 weeks, or at least stay actively working on it. Inactivity for a long period may necessitate a closure of the PR. As mentioned earlier updates would be nice.
 
 Deploy to heroku using the badge provided above and post the link in the description of your PR.
 
-### Step 5: Code Review
+### Step 5: Code Reviews
 
 Your code will be reviewed, in this sequence, by:
 
